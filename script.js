@@ -340,7 +340,7 @@ app.checkAnswer = (playerAnswer) => {
 app.formatAnswer = (answer) => {
     const lowercaseAnswer = ` ${answer.toLowerCase()} `;
     const removePunctuation = lowercaseAnswer.replace(/!/g, '').replace(/,/g, '').replace(/\./g, '').replace(/\(/g, '').replace(/\)/g, '').replace(/'/g, '').replace(/"/g, '').replace(/:/g, '').replace(/\//g, '').replace(/\\/g, '').replace(/\$/g, '');
-    const removeSymbols = removePunctuation.replace(/<i>/g, '').replace(/<.*>/g, '').replace(/</g, '').replace(/>/g, '').replace(/&/g, '').replace(/-/g, '');
+    const removeSymbols = removePunctuation.replace(/<i>/g, '').replace(/<.*>/g, '').replace(/</g, '').replace(/>/g, '').replace(/&/g, '').replace(/-/g, '').replace(/\?/g, '');
     const removePrepositions = removeSymbols.replace(/ and /g, ' ').replace(/ the /g, ' ').replace(/ a /g, ' ').replace(/ an /g, ' ').replace(/ or /g, ' ').replace(/ is /g, ' ').replace(/ was /g, ' ').replace(/ it /g, ' ').replace(/ also /g, ' ').replace(/s /g, '').replace(/ your /g, ' ');
     const replaceAccents = removePrepositions.replace(/é/g, 'e').replace(/è/g, 'e').replace(/ê/g, 'e').replace(/ë/g, 'e').replace(/ñ/g, 'n').replace(/ç/g, 'c').replace(/à/g, 'a').replace(/á/g, 'a').replace(/â/g, 'a').replace(/ã/g, 'a').replace(/ä/g, 'a').replace(/å/g, 'a').replace(/æ/g, 'ae').replace(/ì/g, 'i').replace(/í/g, 'i').replace(/î/g, 'i').replace(/ï/g, 'i').replace(/ò/g, 'o').replace(/ó/g, 'o').replace(/ô/g, 'o').replace(/õ/g, 'o').replace(/ö/g, 'o').replace(/ù/g, 'u').replace(/ú/g, 'u').replace(/û/g, 'u').replace(/ü/g, 'u');
     const removeSpaces = replaceAccents.replace(/ /g, '');
