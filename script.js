@@ -525,6 +525,7 @@ app.init = () => {
     app.generateCategories();
 };
 
-$(() => {
+
+window.onload = function() {
     app.init();
-});
+}
