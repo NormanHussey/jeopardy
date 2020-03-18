@@ -125,7 +125,7 @@ app.generateRandomNumber = (max) => {
 
 app.getCategories = (count, offset) => {
     const categoryPromise = $.ajax({
-        url: `http://jservice.io/api/categories?count=${count}&offset=${offset}`,
+        url: `https://jservice.io/api/categories?count=${count}&offset=${offset}`,
         method: 'GET',
         dataType: 'json',
     });
@@ -165,7 +165,7 @@ app.getClues = () => {
 
 app.getClueData = (category) => {
     const cluesPromise = $.ajax({
-        url: `http://jservice.io/api/clues?category=${category}`,
+        url: `https://jservice.io/api/clues?category=${category}`,
         method: 'GET',
         dataType: 'json',
     });
